@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3dI-8h-lcZ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="xhm-WQ-zqn">
+            <objects>
+                <navigationController id="3dI-8h-lcZ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oZ6-Gi-o3D">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="vwL-Na-0BX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0EQ-uI-kq7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1729" y="73"/>
+        </scene>
+        <!--Romantic Comedy-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="PosterViewController" customModule="PosterHoster" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="895-Mn-63J">
+                                <rect key="frame" x="188.5" y="456.5" width="37" height="37"/>
+                                <color key="color" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="3Ui-0l-1eR">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="GaR-lf-5JU"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="5a9-mG-fwk"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="lDI-Fr-1b5">
+                                    <size key="itemSize" width="233" height="219"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="50"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="posterCellIdentifier" id="czf-Qb-3ob" customClass="PosterCollectionViewCell" customModule="PosterHoster" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="230"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="7gq-Yy-fon">
+                                            <rect key="frame" x="0.0" y="0.0" width="125" height="230"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder_for_missing_posters" translatesAutoresizingMaskIntoConstraints="NO" id="Pym-8J-ajD" customClass="LazyImageView" customModule="PosterHoster" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="125" height="180"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ipi-f0-NpX">
+                                                    <rect key="frame" x="0.0" y="185" width="33" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Pym-8J-ajD" firstAttribute="centerX" secondItem="7gq-Yy-fon" secondAttribute="centerX" id="8Kk-5n-X0p"/>
+                                                <constraint firstItem="ipi-f0-NpX" firstAttribute="leading" secondItem="7gq-Yy-fon" secondAttribute="leading" id="Iko-I1-neB"/>
+                                                <constraint firstAttribute="bottom" secondItem="Pym-8J-ajD" secondAttribute="bottom" constant="50" id="KXf-rE-F7I"/>
+                                                <constraint firstItem="ipi-f0-NpX" firstAttribute="top" secondItem="Pym-8J-ajD" secondAttribute="bottom" constant="5" id="dY4-2S-ybA"/>
+                                                <constraint firstItem="Pym-8J-ajD" firstAttribute="top" secondItem="7gq-Yy-fon" secondAttribute="top" id="hCp-wn-IQu"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ipi-f0-NpX" secondAttribute="trailing" id="pmq-Yy-BZ2"/>
+                                                <constraint firstItem="Pym-8J-ajD" firstAttribute="leading" secondItem="7gq-Yy-fon" secondAttribute="leading" id="pyv-Qx-HDA"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="125" height="230"/>
+                                        <connections>
+                                            <outlet property="imageView" destination="Pym-8J-ajD" id="lgd-Aw-Vvm"/>
+                                            <outlet property="title" destination="ipi-f0-NpX" id="Epk-Bf-dH6"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="WL9-sR-P88">
+                                    <rect key="frame" x="0.0" y="230" width="414" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionReusableView>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="iEH-Zh-7ON"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Z42-4s-4vn"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
+                        <constraints>
+                            <constraint firstItem="895-Mn-63J" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="HTs-kq-SLe"/>
+                            <constraint firstItem="3Ui-0l-1eR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="R1k-sV-XNK"/>
+                            <constraint firstItem="895-Mn-63J" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="gVu-eN-LRA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3Ui-0l-1eR" secondAttribute="bottom" id="ild-dp-1rY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3Ui-0l-1eR" secondAttribute="trailing" id="sjH-5r-wJd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="3Ui-0l-1eR" secondAttribute="top" id="ucB-DL-kvd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Romantic Comedy" id="nPR-He-t4l"/>
+                    <connections>
+                        <outlet property="loader" destination="895-Mn-63J" id="4WC-4p-UdK"/>
+                        <outlet property="posterCollectionView" destination="3Ui-0l-1eR" id="Prr-a7-kh7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="78.348214285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="placeholder_for_missing_posters" width="321" height="481"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

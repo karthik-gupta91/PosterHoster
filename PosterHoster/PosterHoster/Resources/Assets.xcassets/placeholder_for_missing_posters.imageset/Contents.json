@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "placeholder_for_missing_posters.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
