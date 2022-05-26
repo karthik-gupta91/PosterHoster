@@ -2,13 +2,18 @@
 //  PosterCollectionViewCell.swift
 //  PosterHoster
 //
-//  Created by Kartik Gupta on 14/05/22.
+//  Created by Kartik Gupta on 26/05/22.
 //
 
 import UIKit
 
 class PosterCollectionViewCell: UICollectionViewCell {
-    
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+
     @IBOutlet private weak var imageView : LazyImageView!
     @IBOutlet private weak var title: UILabel!
 
@@ -16,4 +21,5 @@ class PosterCollectionViewCell: UICollectionViewCell {
         self.imageView.downloadFromLink(name: cellModel.imageURL, contentMode: .scaleToFill)
         self.title.text = cellModel.title
     }
+    
 }

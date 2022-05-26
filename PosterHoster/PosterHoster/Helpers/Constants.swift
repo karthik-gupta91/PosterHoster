@@ -14,5 +14,7 @@ class Constants {
     static let okButtonTitle = "Ok"
     static let posterCellIdentifier = "posterCellIdentifier"
     static let PosterNavigationBarTitle = "RomanticComedy"
+    static let posterCellNibName = "PosterCollectionViewCell"
+    static let posterViewTitle = "Romantic Comedy"
 
 }
